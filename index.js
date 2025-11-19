@@ -60,7 +60,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const allowedOrigins = [
- " https://frolic-backend-1.onrender.com"
+ "https://client-frontend-tau.vercel.app"
 ];
 
 const corsOptions = {
