@@ -60,8 +60,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 const allowedOrigins = [
- "https://client-frontend-tau.vercel.app",
-"https://admin-frontend-ruby-omega.vercel.app"
+ "https://logical2025.vercel.app",
+"https://logical-admin-2025.vercel.app"
 ];
 
 const corsOptions = {
