@@ -51,8 +51,8 @@ import cookieParser from "cookie-parser";
 import scheduleRouter from "./routes/schedule.js";
 import dashboardRouter from "./routes/dashboard.js";
 import cors from "cors";
-import path from "path";
-import { fileURLToPath } from "url";
+// import path from "path";
+// import { fileURLToPath } from "url";
 
 dotenv.config();
 const app = express();
@@ -87,18 +87,18 @@ app.use("/user/schedule", scheduleRouter);
 app.use("/admin/dashboard", dashboardRouter);
 
 // ===== Serve react build in production =====
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-if (process.env.NODE_ENV === "production") {
-  const buildPath = path.join(__dirname, "../client/dist"); 
+// if (process.env.NODE_ENV === "production") {
+//   const buildPath = path.join(__dirname, "../client/dist"); 
   
-  app.use(express.static(buildPath));
+//   app.use(express.static(buildPath));
 
-  app.get("/", (req, res) => {
-    res.sendFile(path.join(buildPath, "index.html"));
-  });
-}
+//   app.get("/", (req, res) => {
+//     res.sendFile(path.join(buildPath, "index.html"));
+//   });
+// }
 
 
 app.get("/",(req,res)=>{
