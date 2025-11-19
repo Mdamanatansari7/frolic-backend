@@ -60,9 +60,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:5174",
-  "http://localhost:4173"
+ " https://frolic-backend-1.onrender.com"
 ];
 
 const corsOptions = {
